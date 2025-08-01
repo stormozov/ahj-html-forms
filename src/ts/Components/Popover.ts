@@ -1,3 +1,8 @@
+/**
+ * Компонент всплывающей подсказки.
+ *
+ * @param {string} buttonSelector - селектор кнопок, которые вызывают всплывающую подсказку
+ */
 export default class Popover {
   private _buttonSelector: string;
   private _buttonPopoverMap: Map<HTMLButtonElement, HTMLDivElement>;
@@ -7,14 +12,23 @@ export default class Popover {
     this._buttonPopoverMap = new Map();
   }
 
+  /**
+   * Инициализация компонента.
+   */
   init(): void {
     this._initListeners();
   }
 
+  /**
+   * Инициализация обработчиков событий.
+   */
   private _initListeners(): void {
     this._initButtonListeners();
   }
 
+  /**
+   * Добавление обработчиков событий на кнопки.
+   */
   private _initButtonListeners(): void {
     const buttons = document.querySelectorAll(this._buttonSelector);
 
@@ -25,6 +39,11 @@ export default class Popover {
     });
   }
 
+  /**
+   * Переключение всплывающей подсказки.
+   *
+   * @param {HTMLButtonElement} button - кнопка, которая вызывает всплывающую подсказку
+   */
   private _togglePopover(button: HTMLButtonElement): void {
     const existingPopover = this._buttonPopoverMap.get(button);
 
@@ -41,6 +60,13 @@ export default class Popover {
     }
   }
 
+  /**
+   * Создание всплывающей подсказки.
+   *
+   * @param {HTMLButtonElement} button - кнопка, которая вызывает всплывающую подсказку
+   *
+   * @return {HTMLDivElement} созданная всплывающая подсказка в виде HTML-элемента
+   */
   private _createPopover(button: HTMLButtonElement): HTMLDivElement {
     const title = button.getAttribute('data-popover-title') || '';
     const content = button.getAttribute('data-popover-content') || '';
@@ -62,6 +88,12 @@ export default class Popover {
     return popoverElement;
   }
 
+  /**
+   * Позиционирование всплывающей подсказки.
+   *
+   * @param {HTMLButtonElement} button - кнопка, которая вызывает всплывающую подсказку
+   * @param {HTMLDivElement} popover - всплывающая подсказка
+   */
   private _positionPopover(
     button: HTMLButtonElement,
     popover: HTMLDivElement
