@@ -79,7 +79,7 @@ export default class Popover {
     const popoverRect = popover.getBoundingClientRect();
 
     // Вычисляем точную позицию popover
-    const popoverTop = button.offsetTop - popoverRect.height - 8;
+    const popoverTop = button.offsetTop - popoverRect.height - 10;
     const popoverLeft =
       button.offsetLeft + button.offsetWidth / 2 - popoverRect.width / 2;
 
