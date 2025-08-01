@@ -1,5 +1,7 @@
 # Домашнее задание к занятию "Работа с HTML-формами"
 
+[![CI Pipeline](https://github.com/stormozov/ahj-html-forms/actions/workflows/ci.yml/badge.svg)](https://github.com/stormozov/ahj-html-forms/actions/workflows/ci.yml)
+
 Правила сдачи задания:
 
 1. **Важно**: в рамках этого ДЗ вы можете использовать любой пакетный менеджер
