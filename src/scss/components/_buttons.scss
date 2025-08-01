@@ -1,0 +1,21 @@
+button {
+  cursor: pointer;
+}
+
+.btn {
+  &--primary {
+    background-color: #dc3545;
+
+    font-size: 1.2em;
+    color: #fff;
+  }
+
+  &--popover {
+    border-radius: 6px;
+    padding: 16px 24px;
+
+    &:hover {
+      transform: scale(1.02) rotate(-1deg);
+    }
+  }
+}

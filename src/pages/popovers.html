@@ -8,17 +8,44 @@
   <body>
     <div id="root">
       <div class="container">
-        <!-- Навигация -->
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="./index.html" class="nav__link">Главная</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="wrapper wrapper--popovers">
+          <!-- Навигация -->
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link">Главная</a>
+              </li>
+            </ul>
+          </nav>
 
-        <!-- Заголовок -->
-        <h1>Popovers</h1>
+          <!-- Заголовок -->
+          <h1 class="page-title page-title--popovers">Popovers</h1>
+
+          <!-- Кнопка -->
+          <div class="btn-wrapper">
+            <button
+              class="btn btn--primary btn--popover"
+              data-popover-title="Заголовок 1 всплывающей подсказки"
+              data-popover-content="Текст 1 всплывающей подсказке"
+            >
+              Click to toggle popover #1
+            </button>
+            <button
+              class="btn btn--primary btn--popover"
+              data-popover-title="Заголовок 2 всплывающей подсказки"
+              data-popover-content="Текст 2 всплывающей подсказке"
+            >
+              Click to toggle popover #2
+            </button>
+            <button
+              class="btn btn--primary btn--popover"
+              data-popover-title="Заголовок 3 всплывающей подсказки"
+              data-popover-content="Текст 3 всплывающей подсказке"
+            >
+              Click to toggle popover #3
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </body>

@@ -2,8 +2,17 @@
 body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  font-size: 23px;
+  font-size: 16px;
   background-color: antiquewhite;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+a,
+button {
+  transition: all 0.3s ease-in-out;
 }
 
 .container {
@@ -13,4 +22,27 @@ body {
 
 .webpack-img {
   width: 100%;
+}
+
+.wrapper {
+  &--popovers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+  }
+}
+
+.page-title {
+  &--popovers {
+    margin: 50px 0;
+  }
+}
+
+.btn-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
